@@ -1,0 +1,8 @@
+<div class="container">
+    <a href="{% url 'show' %}"> GoBack &nbsp;</a>
+    <a href="{% url 'edit' pk=board.pk %}"> Modified </a>
+    <h1> {{ board.title }}</h1>
+    <p> {{ board.body }}</p>
+    <p> {{ board.update_date }}</p>
+    <a href="{% url 'delete' pk=board.pk %}">Delete</a>
+</div>

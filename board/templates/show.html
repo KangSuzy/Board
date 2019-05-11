@@ -1,0 +1,28 @@
+<h1 align = "center">This is my First Board !</h1>
+<br><br>
+
+<table clsss="table" width=100%; >
+
+<thead>
+    <tr>
+        <td><strong>Title</strong></td>
+        <td><strong>TextField</strong></td>
+    </tr>
+</thead>
+<tbody> {%for board in boards.all%}
+<tr>
+    <div class="container" 
+    style = "background : lightgray; width : 200">
+    <td>    <a href="{% url 'detail' board.id %}">
+           <h5> {{board.title}}</h5></a></td>
+    <td>    <p> {{board.body}}</p>
+        <small class="text-muted">{{board.pub_date}}</small></td>
+    </div>
+    </tr>
+{% endfor %}
+
+<tbody>
+</table>
+
+
+<h4><a href="{% url 'post' %}">Create New!</a></h4>
